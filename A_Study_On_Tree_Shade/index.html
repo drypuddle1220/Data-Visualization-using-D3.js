@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree Planting Visualization</title>
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.css">
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="/script.js" defer type="module"></script>
+</head>
+  
+  
+<body>
+    <h1 class=" text-black text-center py-4">
+      A Study on Tree Shade on Lawrence, MA <br>
+      
+      by Steven Kim
+    </h1>
+
+  <!-- Visualization 1 with Description -->
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="vis"></div>
+        <script src="visualization.js"></script>
+      </div>
+      <div class="col-md-6">
+        <h2>Diameter Analysis on Tree Families (VEGALITE/ ANNOTATION CHART)</h2>
+        <p>This visualization's purpose is to inform which trees are likely the best for tree shade purposes in the city. It may be a bit speculative but It larger trees tend to be better in shade.</p>
+        <br>
+        <p>
+  <span style="color: green;">Maclura is in green: it has the lowest diameter of all the trees (2.00), and in turn has a high chance for low shade.</span>
+  <br>
+  <span style="color: red;">Metasequoia is red: it has the highest diameter of all the trees (4.00) and has a high chance for HIGH shade.</span>
+</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualization 2 with Description -->
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="vis2"></div>
+        <script src="visualization2.js"></script>
+      </div>
+      <div class="col-md-6">
+        <h2> Has the Tree Plant Number Changed Over the Years by Family?(VEGALITE CHART)</h2>
+        <p>The visualization displays how many trees were planted over time by family. This plays a huge part to the storyline of heat safety in Lawrence, MA as we can spot how much mass shade was given over the years by family. </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <h2>Heat-Density Map of Lawrence MA: Has New Tree Shade Areas Increased? (Interactive Charts)</h2>
+        <p>Check out the maplet along with the brushing tool to see if there has been a significant change in tree plants over the years? this likey is connected to the shade areas that we have at Lawrence.</p>
+  <div class="container my-4">
+    <div class="row">
+      <div class="col">
+         <div id="instructions">
+      
+      <p class = "description">
+
+      </p>
+      <label for="dateplant-dropdown">Select Year:</label>
+      <select id="dateplant-dropdown"></select>
+    </div>
+        <div id="map" class="map-container" style="width: 700px; height: 600px"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Brushing Visualization -->
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="scatterplot"></div>
+      </div>
+      <div class="col-md-6">
+        <div class="barchart"></div>
+      </div>
+    </div>
+    <p class="description">
+      <!-- Add description for Brushing Visualization here -->
+    </p>
+  </div>
+
+  <!-- Area Chart with Description -->
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Area Chart of Tree Families (TEXT CORDINATION CHART)</h2>
+        <p>Explore how different tree families are represented in various areas of the city. Keep in mind that the count of trees is in the bottom of the visualization. Feel free to drag it out for more clarity.</p>
+        <br>
+        <p>
+  <strong><em>Shade score; the purpose of this self-made shade score is because I wanted to rank the families of trees in the town of Lawrence for further analysis in how this town layout is in terms of getting the best shade. This might come in handy when deciding which trees should be planted in the future. Shade score = (count) x (family) /10.</em></strong>
+</p>
+        <div id="area_chart"></div>
+        <script src="/areachart.js"></script>
+      </div>
+    </div>
+    <p>
+  <strong><em>Thus, after one looks at these visualizations, it is apparent that the town of Lawrence MA has a wide variety of trees that give excellent amount of shade to the community. Though the number of tree plants have decreased, if there is a case where more trees are needed for shade or other purposes, there are many ways to choose a tree, such as diameter and shade score. Shade score is a great way to choose due to the balance between commonality and diameter, which takes a fair look on price and width of the tree for shade. I want this to be more expository than indicative for the reader so please feel free to use these charts for other inferences</em></strong>
+</p>
+  </div>
+
+</body>
+</html>
