@@ -1,0 +1,22 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+.populationplot{
+  margin:10px;
+}
+
+.data-label{
+  font-size:11px;
+}
+.bar:hover{
+  fill:#ff5722;
+  cursor:pointer;
+}

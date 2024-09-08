@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SVG & D3</title>
+
+    <!-- Milligram CSS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Load Javascript files -->
+    
+    
+    <script defer src="https://d3js.org/d3.v6.min.js"></script>
+
+    <script defer src="/script.js"></script>
+    
+    
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        Population in European Cities
+      </h2>
+      <div class="city-count"></div>
+      <div class="population-plot"></div>
+      <h2>
+        World's Tallest Buildings
+      </h2>
+      <div class="row">
+        <div class="column">
+          <div class="heightchart"></div>
+        </div>
+        <div class="column">
+          <div class="row">
+            <div class="column">
+              <img
+                class="image"
+                src="https://cdn.glitch.com/a9660dae-4e11-4fbe-a37b-62b5ae9c3232%2F1.jpg?v=1600896772310"
+              />
+            </div>
+            <div class="column">
+              <h4 class="building-name">
+                Burj Khalifa
+              </h4>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Height</td>
+                    <td><span class="height">2717</span> ft</td>
+                  </tr>
+                  <tr>
+                    <td>City</td>
+                    <td><span class="city">Dubai</span></td>
+                  </tr>
+                  <tr>
+                    <td>Country</td>
+                    <td><span class="country">United Arab Emirates</span></td>
+                  </tr>
+                  <tr>
+                    <td>Floors</td>
+                    <td><span class="floors">163</span></td>
+                  </tr>
+                  <tr>
+                    <td>Completed</td>
+                    <td><span class="completed">2010</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
